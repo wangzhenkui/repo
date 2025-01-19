@@ -11,7 +11,13 @@ private:
     char * m_string;
 public:
     MyString(/* args */);
+    MyString(const char * str);
+    MyString(const MyString & other);
     ~MyString();
+
+    const char * getString()const;
+
+    friend std::ostream& operator<<(std::ostream & os, const MyString & other);
 };
 
 
